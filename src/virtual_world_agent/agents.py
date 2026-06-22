@@ -55,10 +55,10 @@ class HeuristicPolicy:
                     action = self._move_toward(observation, target_pos)
                 return action, {"thought": "positioning to operate the blue door"}
 
-            goal_pos = self._find_object("emerald_goal")
+            goal_pos = self._find_object("emerald_beacon") or self._find_object("emerald_goal")
             if goal_pos:
                 action = self._move_toward(observation, goal_pos)
-                return action, {"thought": "moving toward the known emerald goal"}
+                return action, {"thought": "moving toward the known emerald beacon"}
 
         frontier = self._nearest_frontier(current)
         if frontier:
@@ -74,8 +74,11 @@ class HeuristicPolicy:
 
     def _update_memory(self, observation: dict[str, Any]) -> None:
         for cell in observation["visible_cells"]:
-            position = cell["position"]
-            self.known[(position["x"], position["y"])] = cell
+            position = cell.get("grid_position") or cell.get("position")
+            if "z" in position:
+                self.known[(position["x"], position["z"])] = cell
+            else:
+                self.known[(position["x"], position["y"])] = cell
 
     def _find_object(self, object_name: str) -> Position | None:
         for pos, cell in self.known.items():
@@ -86,7 +89,12 @@ class HeuristicPolicy:
     def _target_closed_door(self, current: Position) -> tuple[Position, Direction] | None:
         candidates: list[tuple[int, Position, Direction]] = []
         for door_pos, cell in self.known.items():
-            if cell["terrain"] not in {"locked_door", "closed_door"}:
+            if cell["terrain"] not in {
+                "locked_door",
+                "closed_door",
+                "sealed_force_door",
+                "closed_force_door",
+            }:
                 continue
             for direction, vector in VECTORS.items():
                 dx, dy = vector
@@ -210,7 +218,9 @@ class HeuristicPolicy:
         return None
 
     def _agent_position(self, observation: dict[str, Any]) -> Position:
-        position = observation["agent"]["position"]
+        position = observation["agent"].get("grid_position") or observation["agent"]["position"]
+        if "z" in position:
+            return (position["x"], position["z"])
         return (position["x"], position["y"])
 
     def _reconstruct(
@@ -311,10 +321,11 @@ class LLMPolicy:
 
     def _system_prompt(self) -> str:
         return (
-            "You control an agent in a partially observable grid world. "
-            "The mission is to find the brass key, unlock and open the blue door, "
-            "reach the emerald goal tile, and finish. The observation contains a "
-            "known_map, visible_cells, front_cell, inventory, and available_actions. "
+            "You control an agent inside a partially observable 3D scene called the "
+            "Aether Vault. The mission is to find the brass key, unlock and open "
+            "the blue force door, enter the emerald beacon, and finish. The "
+            "observation contains a metric pose, yaw, known_map, visible_cells, "
+            "visible_entities, front_cell, inventory, and available_actions. "
             "Choose exactly one action whose type appears in available_actions. "
             "Do not invent actions or parameters. Respond only with JSON in this "
             'shape: {"thought": "brief reason", "action": {"type": "move_forward"}}.'

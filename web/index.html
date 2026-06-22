@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aether Vault Agent Replay</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.164.1/build/three.module.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">LLM Agent In A 3D Virtual World</p>
+          <h1>Aether Vault</h1>
+          <p class="summary">
+            A validated agent harness rendered as a cinematic 3D scene. The
+            browser replay is driven by the exact JSON trajectory produced by
+            the Python environment.
+          </p>
+        </div>
+        <div class="status-card">
+          <span id="resultBadge">loading replay</span>
+          <strong id="stepLabel">Step 0</strong>
+          <small id="poseLabel">pose unavailable</small>
+        </div>
+      </section>
+
+      <section class="stage">
+        <div id="viewport" aria-label="3D replay viewport"></div>
+        <aside class="panel">
+          <div>
+            <p class="panel-label">Agent Thought</p>
+            <p id="thoughtText" class="thought">Loading trajectory...</p>
+          </div>
+          <div>
+            <p class="panel-label">Last Event</p>
+            <p id="eventText">Waiting for replay data.</p>
+          </div>
+          <div>
+            <p class="panel-label">Action</p>
+            <code id="actionText">none</code>
+          </div>
+          <div>
+            <p class="panel-label">Inventory</p>
+            <code id="inventoryText">[]</code>
+          </div>
+          <div>
+            <p class="panel-label">Visible Entities</p>
+            <ul id="entityList"></ul>
+          </div>
+          <div>
+            <p class="panel-label">Known Map</p>
+            <pre id="knownMap"></pre>
+          </div>
+        </aside>
+      </section>
+
+      <section class="controls">
+        <button id="playButton" type="button">Pause</button>
+        <label>
+          Timeline
+          <input id="timeline" type="range" min="0" max="0" value="0" />
+        </label>
+        <label>
+          Speed
+          <select id="speed">
+            <option value="0.6">0.6x</option>
+            <option value="1" selected>1x</option>
+            <option value="1.8">1.8x</option>
+            <option value="3">3x</option>
+          </select>
+        </label>
+        <a href="../examples/demo_replay.json">Replay JSON</a>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

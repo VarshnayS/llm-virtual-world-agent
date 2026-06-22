@@ -1,0 +1,6003 @@
+{
+  "mission": "Explore the Aether Vault, recover the brass key from its pedestal, unlock and open the blue force door, enter the emerald beacon, then finish.",
+  "scene": {
+    "name": "Aether Vault",
+    "layout": [
+      "###########",
+      "#S..#....G#",
+      "#.#.#.###.#",
+      "#.#...#...#",
+      "#.###.#.#.#",
+      "#...K.D.#.#",
+      "###########"
+    ],
+    "cell_size_m": 2.0,
+    "wall_height_m": 3.2,
+    "eye_height_m": 1.45,
+    "start": {
+      "grid_position": {
+        "x": 1,
+        "z": 1
+      },
+      "center_m": {
+        "x": -8.0,
+        "y": 0,
+        "z": -4.0
+      }
+    },
+    "goal": {
+      "grid_position": {
+        "x": 9,
+        "z": 1
+      },
+      "center_m": {
+        "x": 8.0,
+        "y": 0,
+        "z": -4.0
+      }
+    },
+    "decorations": [
+      {
+        "id": "light-pillar-0",
+        "type": "light_pillar",
+        "grid_position": {
+          "x": 1,
+          "z": 3
+        },
+        "center_m": {
+          "x": -8.0,
+          "y": 0,
+          "z": 0.0
+        }
+      },
+      {
+        "id": "light-pillar-1",
+        "type": "light_pillar",
+        "grid_position": {
+          "x": 5,
+          "z": 1
+        },
+        "center_m": {
+          "x": 0.0,
+          "y": 0,
+          "z": -4.0
+        }
+      },
+      {
+        "id": "light-pillar-2",
+        "type": "light_pillar",
+        "grid_position": {
+          "x": 7,
+          "z": 3
+        },
+        "center_m": {
+          "x": 4.0,
+          "y": 0,
+          "z": 0.0
+        }
+      },
+      {
+        "id": "light-pillar-3",
+        "type": "light_pillar",
+        "grid_position": {
+          "x": 9,
+          "z": 5
+        },
+        "center_m": {
+          "x": 8.0,
+          "y": 0,
+          "z": 4.0
+        }
+      }
+    ],
+    "palette": {
+      "floor": "#171b24",
+      "wall": "#222938",
+      "wall_trim": "#7f8cff",
+      "door_locked": "#236bff",
+      "door_open": "#67e8f9",
+      "key": "#f5c542",
+      "goal": "#20f5a6",
+      "agent": "#ff6b35"
+    }
+  },
+  "frames": [
+    {
+      "step": 0,
+      "agent": {
+        "grid_position": {
+          "x": 1,
+          "z": 1
+        },
+        "pose": {
+          "position_m": {
+            "x": -8.0,
+            "y": 1.45,
+            "z": -4.0
+          },
+          "yaw_degrees": 90,
+          "facing": "east"
+        },
+        "facing": "east",
+        "inventory": []
+      },
+      "action": null,
+      "thought": "",
+      "event": "Spawned in the Aether Vault atrium.",
+      "known_map": "####???????\n#>..???????\n#.#.???????\n#.#.???????\n???????????\n???????????\n???????????",
+      "visible_entities": [
+        {
+          "id": "wall-0-1",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 0,
+            "z": 1
+          },
+          "center_m": {
+            "x": -10.0,
+            "y": 0,
+            "z": -4.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -180.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-1-0",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 1,
+            "z": 0
+          },
+          "center_m": {
+            "x": -8.0,
+            "y": 0,
+            "z": -6.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-2-0",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 2,
+            "z": 0
+          },
+          "center_m": {
+            "x": -6.0,
+            "y": 0,
+            "z": -6.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-2-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 2,
+            "z": 2
+          },
+          "center_m": {
+            "x": -6.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-3-0",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 3,
+            "z": 0
+          },
+          "center_m": {
+            "x": -4.0,
+            "y": 0,
+            "z": -6.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": -26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "move_forward"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": true,
+            "open": false
+          }
+        ],
+        "items": [
+          {
+            "id": "brass_key-4-5",
+            "type": "brass_key",
+            "grid_position": {
+              "x": 4,
+              "z": 5
+            },
+            "center_m": {
+              "x": -2.0,
+              "y": 0.85,
+              "z": 4.0
+            }
+          }
+        ]
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 1,
+      "agent": {
+        "grid_position": {
+          "x": 2,
+          "z": 1
+        },
+        "pose": {
+          "position_m": {
+            "x": -6.0,
+            "y": 1.45,
+            "z": -4.0
+          },
+          "yaw_degrees": 90,
+          "facing": "east"
+        },
+        "facing": "east",
+        "inventory": []
+      },
+      "action": {
+        "type": "move_forward"
+      },
+      "thought": "moving toward nearest useful frontier",
+      "event": "Moved to floor cell (2,1).",
+      "known_map": "#####??????\n#.>.#??????\n#.#.#??????\n#.#..??????\n???????????\n???????????\n???????????",
+      "visible_entities": [
+        {
+          "id": "wall-2-0",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 2,
+            "z": 0
+          },
+          "center_m": {
+            "x": -6.0,
+            "y": 0,
+            "z": -6.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-2-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 2,
+            "z": 2
+          },
+          "center_m": {
+            "x": -6.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-3-0",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 3,
+            "z": 0
+          },
+          "center_m": {
+            "x": -4.0,
+            "y": 0,
+            "z": -6.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-1",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 1
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": -4.0
+          },
+          "distance_m": 4.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-0",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 0
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": -6.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": -26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 2
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": 26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "move_forward"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": true,
+            "open": false
+          }
+        ],
+        "items": [
+          {
+            "id": "brass_key-4-5",
+            "type": "brass_key",
+            "grid_position": {
+              "x": 4,
+              "z": 5
+            },
+            "center_m": {
+              "x": -2.0,
+              "y": 0.85,
+              "z": 4.0
+            }
+          }
+        ]
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 2,
+      "agent": {
+        "grid_position": {
+          "x": 3,
+          "z": 1
+        },
+        "pose": {
+          "position_m": {
+            "x": -4.0,
+            "y": 1.45,
+            "z": -4.0
+          },
+          "yaw_degrees": 90,
+          "facing": "east"
+        },
+        "facing": "east",
+        "inventory": []
+      },
+      "action": {
+        "type": "move_forward"
+      },
+      "thought": "moving toward nearest useful frontier",
+      "event": "Moved to floor cell (3,1).",
+      "known_map": "######?????\n#..>#.?????\n#.#.#.?????\n#.#...?????\n???????????\n???????????\n???????????",
+      "visible_entities": [
+        {
+          "id": "wall-3-0",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 3,
+            "z": 0
+          },
+          "center_m": {
+            "x": -4.0,
+            "y": 0,
+            "z": -6.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-1",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 1
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": -4.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-0",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 0
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": -6.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 2
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-5-0",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 5,
+            "z": 0
+          },
+          "center_m": {
+            "x": 0.0,
+            "y": 0,
+            "z": -6.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": -26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": true,
+            "open": false
+          }
+        ],
+        "items": [
+          {
+            "id": "brass_key-4-5",
+            "type": "brass_key",
+            "grid_position": {
+              "x": 4,
+              "z": 5
+            },
+            "center_m": {
+              "x": -2.0,
+              "y": 0.85,
+              "z": 4.0
+            }
+          }
+        ]
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 3,
+      "agent": {
+        "grid_position": {
+          "x": 3,
+          "z": 1
+        },
+        "pose": {
+          "position_m": {
+            "x": -4.0,
+            "y": 1.45,
+            "z": -4.0
+          },
+          "yaw_degrees": 180,
+          "facing": "south"
+        },
+        "facing": "south",
+        "inventory": []
+      },
+      "action": {
+        "type": "turn_right"
+      },
+      "thought": "moving toward nearest useful frontier",
+      "event": "Rotated right; camera yaw is now 180 degrees.",
+      "known_map": "######?????\n#..v#.?????\n#.#.#.?????\n#.#...?????\n???????????\n???????????\n???????????",
+      "visible_entities": [
+        {
+          "id": "wall-3-0",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 3,
+            "z": 0
+          },
+          "center_m": {
+            "x": -4.0,
+            "y": 0,
+            "z": -6.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -180.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-1",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 1
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": -4.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-2-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 2,
+            "z": 2
+          },
+          "center_m": {
+            "x": -6.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 2
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-2-3",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 2,
+            "z": 3
+          },
+          "center_m": {
+            "x": -6.0,
+            "y": 0,
+            "z": 0.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": 26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "move_forward"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": true,
+            "open": false
+          }
+        ],
+        "items": [
+          {
+            "id": "brass_key-4-5",
+            "type": "brass_key",
+            "grid_position": {
+              "x": 4,
+              "z": 5
+            },
+            "center_m": {
+              "x": -2.0,
+              "y": 0.85,
+              "z": 4.0
+            }
+          }
+        ]
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 4,
+      "agent": {
+        "grid_position": {
+          "x": 3,
+          "z": 2
+        },
+        "pose": {
+          "position_m": {
+            "x": -4.0,
+            "y": 1.45,
+            "z": -2.0
+          },
+          "yaw_degrees": 180,
+          "facing": "south"
+        },
+        "facing": "south",
+        "inventory": []
+      },
+      "action": {
+        "type": "move_forward"
+      },
+      "thought": "moving toward nearest useful frontier",
+      "event": "Moved to floor cell (3,2).",
+      "known_map": "######?????\n#...#.?????\n#.#v#.?????\n#.#...?????\n?.###.?????\n???????????\n???????????",
+      "visible_entities": [
+        {
+          "id": "wall-2-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 2,
+            "z": 2
+          },
+          "center_m": {
+            "x": -6.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 2
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-2-3",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 2,
+            "z": 3
+          },
+          "center_m": {
+            "x": -6.0,
+            "y": 0,
+            "z": 0.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-3-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 3,
+            "z": 4
+          },
+          "center_m": {
+            "x": -4.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 4.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-2-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 2,
+            "z": 4
+          },
+          "center_m": {
+            "x": -6.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": 26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 4
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": -26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "move_forward"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": true,
+            "open": false
+          }
+        ],
+        "items": [
+          {
+            "id": "brass_key-4-5",
+            "type": "brass_key",
+            "grid_position": {
+              "x": 4,
+              "z": 5
+            },
+            "center_m": {
+              "x": -2.0,
+              "y": 0.85,
+              "z": 4.0
+            }
+          }
+        ]
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 5,
+      "agent": {
+        "grid_position": {
+          "x": 3,
+          "z": 3
+        },
+        "pose": {
+          "position_m": {
+            "x": -4.0,
+            "y": 1.45,
+            "z": 0.0
+          },
+          "yaw_degrees": 180,
+          "facing": "south"
+        },
+        "facing": "south",
+        "inventory": []
+      },
+      "action": {
+        "type": "move_forward"
+      },
+      "thought": "moving toward nearest useful frontier",
+      "event": "Moved to floor cell (3,3).",
+      "known_map": "######?????\n#...#.?????\n#.#.#.?????\n#.#v..?????\n?.###.?????\n?...K.?????\n???????????",
+      "visible_entities": [
+        {
+          "id": "wall-2-3",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 2,
+            "z": 3
+          },
+          "center_m": {
+            "x": -6.0,
+            "y": 0,
+            "z": 0.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-3-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 3,
+            "z": 4
+          },
+          "center_m": {
+            "x": -4.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-2-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 2,
+            "z": 4
+          },
+          "center_m": {
+            "x": -6.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 4
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "brass_key-4-5",
+          "label": "brass key hovering above a pedestal",
+          "kind": "artifact",
+          "grid_position": {
+            "x": 4,
+            "z": 5
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 4.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": -26.6,
+          "blocks_movement": false,
+          "state": {
+            "terrain": "stone_floor",
+            "objects": [
+              "brass_key"
+            ]
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": true,
+            "open": false
+          }
+        ],
+        "items": [
+          {
+            "id": "brass_key-4-5",
+            "type": "brass_key",
+            "grid_position": {
+              "x": 4,
+              "z": 5
+            },
+            "center_m": {
+              "x": -2.0,
+              "y": 0.85,
+              "z": 4.0
+            }
+          }
+        ]
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 6,
+      "agent": {
+        "grid_position": {
+          "x": 3,
+          "z": 3
+        },
+        "pose": {
+          "position_m": {
+            "x": -4.0,
+            "y": 1.45,
+            "z": 0.0
+          },
+          "yaw_degrees": 90,
+          "facing": "east"
+        },
+        "facing": "east",
+        "inventory": []
+      },
+      "action": {
+        "type": "turn_left"
+      },
+      "thought": "moving toward the known brass key",
+      "event": "Rotated left; camera yaw is now 90 degrees.",
+      "known_map": "######?????\n#...#.?????\n#.#.#.?????\n#.#>..?????\n?.###.?????\n?...K.?????\n???????????",
+      "visible_entities": [
+        {
+          "id": "wall-2-3",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 2,
+            "z": 3
+          },
+          "center_m": {
+            "x": -6.0,
+            "y": 0,
+            "z": 0.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -180.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-3-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 3,
+            "z": 4
+          },
+          "center_m": {
+            "x": -4.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 2
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 4
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "move_forward"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": true,
+            "open": false
+          }
+        ],
+        "items": [
+          {
+            "id": "brass_key-4-5",
+            "type": "brass_key",
+            "grid_position": {
+              "x": 4,
+              "z": 5
+            },
+            "center_m": {
+              "x": -2.0,
+              "y": 0.85,
+              "z": 4.0
+            }
+          }
+        ]
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 7,
+      "agent": {
+        "grid_position": {
+          "x": 4,
+          "z": 3
+        },
+        "pose": {
+          "position_m": {
+            "x": -2.0,
+            "y": 1.45,
+            "z": 0.0
+          },
+          "yaw_degrees": 90,
+          "facing": "east"
+        },
+        "facing": "east",
+        "inventory": []
+      },
+      "action": {
+        "type": "move_forward"
+      },
+      "thought": "moving toward the known brass key",
+      "event": "Moved to floor cell (4,3).",
+      "known_map": "######?????\n#...#..????\n#.#.#.#????\n#.#.>.#????\n?.###.#????\n?...K.D????\n???????????",
+      "visible_entities": [
+        {
+          "id": "wall-4-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 2
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 4
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-3",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 3
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 0.0
+          },
+          "distance_m": 4.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 2
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": -26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 4
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": 26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "door-6-5",
+          "label": "locked blue force door",
+          "kind": "door",
+          "grid_position": {
+            "x": 6,
+            "z": 5
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 4.0
+          },
+          "distance_m": 5.66,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "locked": true,
+            "open": false
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "move_forward"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": true,
+            "open": false
+          }
+        ],
+        "items": [
+          {
+            "id": "brass_key-4-5",
+            "type": "brass_key",
+            "grid_position": {
+              "x": 4,
+              "z": 5
+            },
+            "center_m": {
+              "x": -2.0,
+              "y": 0.85,
+              "z": 4.0
+            }
+          }
+        ]
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 8,
+      "agent": {
+        "grid_position": {
+          "x": 5,
+          "z": 3
+        },
+        "pose": {
+          "position_m": {
+            "x": 0.0,
+            "y": 1.45,
+            "z": 0.0
+          },
+          "yaw_degrees": 90,
+          "facing": "east"
+        },
+        "facing": "east",
+        "inventory": []
+      },
+      "action": {
+        "type": "move_forward"
+      },
+      "thought": "moving toward the known brass key",
+      "event": "Moved to floor cell (5,3).",
+      "known_map": "######?????\n#...#...???\n#.#.#.##???\n#.#..>#.???\n?.###.#.???\n?...K.D.???\n???????????",
+      "visible_entities": [
+        {
+          "id": "wall-6-3",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 3
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 0.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 2
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 4
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-7-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 7,
+            "z": 2
+          },
+          "center_m": {
+            "x": 4.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": -26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": true,
+            "open": false
+          }
+        ],
+        "items": [
+          {
+            "id": "brass_key-4-5",
+            "type": "brass_key",
+            "grid_position": {
+              "x": 4,
+              "z": 5
+            },
+            "center_m": {
+              "x": -2.0,
+              "y": 0.85,
+              "z": 4.0
+            }
+          }
+        ]
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 9,
+      "agent": {
+        "grid_position": {
+          "x": 5,
+          "z": 3
+        },
+        "pose": {
+          "position_m": {
+            "x": 0.0,
+            "y": 1.45,
+            "z": 0.0
+          },
+          "yaw_degrees": 180,
+          "facing": "south"
+        },
+        "facing": "south",
+        "inventory": []
+      },
+      "action": {
+        "type": "turn_right"
+      },
+      "thought": "moving toward the known brass key",
+      "event": "Rotated right; camera yaw is now 180 degrees.",
+      "known_map": "######?????\n#...#...???\n#.#.#.##???\n#.#..v#.???\n?.###.#.???\n?...K.D.???\n???????????",
+      "visible_entities": [
+        {
+          "id": "wall-6-3",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 3
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 0.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 4
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 4
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "brass_key-4-5",
+          "label": "brass key hovering above a pedestal",
+          "kind": "artifact",
+          "grid_position": {
+            "x": 4,
+            "z": 5
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 4.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": 26.6,
+          "blocks_movement": false,
+          "state": {
+            "terrain": "stone_floor",
+            "objects": [
+              "brass_key"
+            ]
+          }
+        },
+        {
+          "id": "door-6-5",
+          "label": "locked blue force door",
+          "kind": "door",
+          "grid_position": {
+            "x": 6,
+            "z": 5
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 4.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": -26.6,
+          "blocks_movement": true,
+          "state": {
+            "locked": true,
+            "open": false
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "move_forward"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": true,
+            "open": false
+          }
+        ],
+        "items": [
+          {
+            "id": "brass_key-4-5",
+            "type": "brass_key",
+            "grid_position": {
+              "x": 4,
+              "z": 5
+            },
+            "center_m": {
+              "x": -2.0,
+              "y": 0.85,
+              "z": 4.0
+            }
+          }
+        ]
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 10,
+      "agent": {
+        "grid_position": {
+          "x": 5,
+          "z": 4
+        },
+        "pose": {
+          "position_m": {
+            "x": 0.0,
+            "y": 1.45,
+            "z": 2.0
+          },
+          "yaw_degrees": 180,
+          "facing": "south"
+        },
+        "facing": "south",
+        "inventory": []
+      },
+      "action": {
+        "type": "move_forward"
+      },
+      "thought": "moving toward the known brass key",
+      "event": "Moved to floor cell (5,4).",
+      "known_map": "######?????\n#...#...???\n#.#.#.##???\n#.#...#.???\n?.###v#.???\n?...K.D.???\n???#####???",
+      "visible_entities": [
+        {
+          "id": "wall-4-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 4
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 4
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "brass_key-4-5",
+          "label": "brass key hovering above a pedestal",
+          "kind": "artifact",
+          "grid_position": {
+            "x": 4,
+            "z": 5
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 4.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": false,
+          "state": {
+            "terrain": "stone_floor",
+            "objects": [
+              "brass_key"
+            ]
+          }
+        },
+        {
+          "id": "door-6-5",
+          "label": "locked blue force door",
+          "kind": "door",
+          "grid_position": {
+            "x": 6,
+            "z": 5
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 4.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "locked": true,
+            "open": false
+          }
+        },
+        {
+          "id": "wall-5-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 5,
+            "z": 6
+          },
+          "center_m": {
+            "x": 0.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 4.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 6
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": 26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 6
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": -26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-3-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 3,
+            "z": 6
+          },
+          "center_m": {
+            "x": -4.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 5.66,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-7-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 7,
+            "z": 6
+          },
+          "center_m": {
+            "x": 4.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 5.66,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "move_forward"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": true,
+            "open": false
+          }
+        ],
+        "items": [
+          {
+            "id": "brass_key-4-5",
+            "type": "brass_key",
+            "grid_position": {
+              "x": 4,
+              "z": 5
+            },
+            "center_m": {
+              "x": -2.0,
+              "y": 0.85,
+              "z": 4.0
+            }
+          }
+        ]
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 11,
+      "agent": {
+        "grid_position": {
+          "x": 5,
+          "z": 5
+        },
+        "pose": {
+          "position_m": {
+            "x": 0.0,
+            "y": 1.45,
+            "z": 4.0
+          },
+          "yaw_degrees": 180,
+          "facing": "south"
+        },
+        "facing": "south",
+        "inventory": []
+      },
+      "action": {
+        "type": "move_forward"
+      },
+      "thought": "moving toward the known brass key",
+      "event": "Moved to floor cell (5,5).",
+      "known_map": "######?????\n#...#...???\n#.#.#.##???\n#.#...#.???\n?.###.#.???\n?...KvD.???\n???#####???",
+      "visible_entities": [
+        {
+          "id": "brass_key-4-5",
+          "label": "brass key hovering above a pedestal",
+          "kind": "artifact",
+          "grid_position": {
+            "x": 4,
+            "z": 5
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 4.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": false,
+          "state": {
+            "terrain": "stone_floor",
+            "objects": [
+              "brass_key"
+            ]
+          }
+        },
+        {
+          "id": "door-6-5",
+          "label": "locked blue force door",
+          "kind": "door",
+          "grid_position": {
+            "x": 6,
+            "z": 5
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 4.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -90.0,
+          "blocks_movement": true,
+          "state": {
+            "locked": true,
+            "open": false
+          }
+        },
+        {
+          "id": "wall-5-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 5,
+            "z": 6
+          },
+          "center_m": {
+            "x": 0.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 6
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 6
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": true,
+            "open": false
+          }
+        ],
+        "items": [
+          {
+            "id": "brass_key-4-5",
+            "type": "brass_key",
+            "grid_position": {
+              "x": 4,
+              "z": 5
+            },
+            "center_m": {
+              "x": -2.0,
+              "y": 0.85,
+              "z": 4.0
+            }
+          }
+        ]
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 12,
+      "agent": {
+        "grid_position": {
+          "x": 5,
+          "z": 5
+        },
+        "pose": {
+          "position_m": {
+            "x": 0.0,
+            "y": 1.45,
+            "z": 4.0
+          },
+          "yaw_degrees": 270,
+          "facing": "west"
+        },
+        "facing": "west",
+        "inventory": []
+      },
+      "action": {
+        "type": "turn_right"
+      },
+      "thought": "moving toward the known brass key",
+      "event": "Rotated right; camera yaw is now 270 degrees.",
+      "known_map": "######?????\n#...#...???\n#.#.#.##???\n#.#...#.???\n?.###.#.???\n?...K<D.???\n???#####???",
+      "visible_entities": [
+        {
+          "id": "brass_key-4-5",
+          "label": "brass key hovering above a pedestal",
+          "kind": "artifact",
+          "grid_position": {
+            "x": 4,
+            "z": 5
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 4.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": false,
+          "state": {
+            "terrain": "stone_floor",
+            "objects": [
+              "brass_key"
+            ]
+          }
+        },
+        {
+          "id": "door-6-5",
+          "label": "locked blue force door",
+          "kind": "door",
+          "grid_position": {
+            "x": 6,
+            "z": 5
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 4.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -180.0,
+          "blocks_movement": true,
+          "state": {
+            "locked": true,
+            "open": false
+          }
+        },
+        {
+          "id": "wall-5-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 5,
+            "z": 6
+          },
+          "center_m": {
+            "x": 0.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 4
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 6
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-3-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 3,
+            "z": 4
+          },
+          "center_m": {
+            "x": -4.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": 26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-3-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 3,
+            "z": 6
+          },
+          "center_m": {
+            "x": -4.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": -26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "move_forward"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": true,
+            "open": false
+          }
+        ],
+        "items": [
+          {
+            "id": "brass_key-4-5",
+            "type": "brass_key",
+            "grid_position": {
+              "x": 4,
+              "z": 5
+            },
+            "center_m": {
+              "x": -2.0,
+              "y": 0.85,
+              "z": 4.0
+            }
+          }
+        ]
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 13,
+      "agent": {
+        "grid_position": {
+          "x": 4,
+          "z": 5
+        },
+        "pose": {
+          "position_m": {
+            "x": -2.0,
+            "y": 1.45,
+            "z": 4.0
+          },
+          "yaw_degrees": 270,
+          "facing": "west"
+        },
+        "facing": "west",
+        "inventory": []
+      },
+      "action": {
+        "type": "move_forward"
+      },
+      "thought": "moving toward the known brass key",
+      "event": "Moved to floor cell (4,5).",
+      "known_map": "######?????\n#...#...???\n#.#.#.##???\n#.#...#.???\n?.###.#.???\n?...<.D.???\n??######???",
+      "visible_entities": [
+        {
+          "id": "brass_key-4-5",
+          "label": "brass key hovering above a pedestal",
+          "kind": "artifact",
+          "grid_position": {
+            "x": 4,
+            "z": 5
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 4.0
+          },
+          "distance_m": 0.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": false,
+          "state": {
+            "terrain": "stone_floor",
+            "objects": [
+              "brass_key"
+            ]
+          }
+        },
+        {
+          "id": "wall-4-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 4
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 6
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-3-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 3,
+            "z": 4
+          },
+          "center_m": {
+            "x": -4.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-3-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 3,
+            "z": 6
+          },
+          "center_m": {
+            "x": -4.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-2-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 2,
+            "z": 4
+          },
+          "center_m": {
+            "x": -6.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": 26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-2-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 2,
+            "z": 6
+          },
+          "center_m": {
+            "x": -6.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": -26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-2-3",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 2,
+            "z": 3
+          },
+          "center_m": {
+            "x": -6.0,
+            "y": 0,
+            "z": 0.0
+          },
+          "distance_m": 5.66,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "move_forward",
+        "pick_up"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": true,
+            "open": false
+          }
+        ],
+        "items": [
+          {
+            "id": "brass_key-4-5",
+            "type": "brass_key",
+            "grid_position": {
+              "x": 4,
+              "z": 5
+            },
+            "center_m": {
+              "x": -2.0,
+              "y": 0.85,
+              "z": 4.0
+            }
+          }
+        ]
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 14,
+      "agent": {
+        "grid_position": {
+          "x": 4,
+          "z": 5
+        },
+        "pose": {
+          "position_m": {
+            "x": -2.0,
+            "y": 1.45,
+            "z": 4.0
+          },
+          "yaw_degrees": 270,
+          "facing": "west"
+        },
+        "facing": "west",
+        "inventory": [
+          "brass_key"
+        ]
+      },
+      "action": {
+        "type": "pick_up"
+      },
+      "thought": "collecting the key before approaching the door",
+      "event": "Lifted brass_key from the brass pedestal.",
+      "known_map": "######?????\n#...#...???\n#.#.#.##???\n#.#...#.???\n?.###.#.???\n?...<.D.???\n??######???",
+      "visible_entities": [
+        {
+          "id": "wall-4-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 4
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 6
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-3-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 3,
+            "z": 4
+          },
+          "center_m": {
+            "x": -4.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-3-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 3,
+            "z": 6
+          },
+          "center_m": {
+            "x": -4.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-2-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 2,
+            "z": 4
+          },
+          "center_m": {
+            "x": -6.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": 26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-2-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 2,
+            "z": 6
+          },
+          "center_m": {
+            "x": -6.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": -26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-2-3",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 2,
+            "z": 3
+          },
+          "center_m": {
+            "x": -6.0,
+            "y": 0,
+            "z": 0.0
+          },
+          "distance_m": 5.66,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "move_forward"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": true,
+            "open": false
+          }
+        ],
+        "items": []
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 15,
+      "agent": {
+        "grid_position": {
+          "x": 4,
+          "z": 5
+        },
+        "pose": {
+          "position_m": {
+            "x": -2.0,
+            "y": 1.45,
+            "z": 4.0
+          },
+          "yaw_degrees": 0,
+          "facing": "north"
+        },
+        "facing": "north",
+        "inventory": [
+          "brass_key"
+        ]
+      },
+      "action": {
+        "type": "turn_right"
+      },
+      "thought": "positioning to operate the blue door",
+      "event": "Rotated right; camera yaw is now 0 degrees.",
+      "known_map": "######?????\n#...#...???\n#.#.#.##???\n#.#...#.???\n?.###.#.???\n?...^.D.???\n??######???",
+      "visible_entities": [
+        {
+          "id": "wall-4-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 4
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 6
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -180.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-3-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 3,
+            "z": 4
+          },
+          "center_m": {
+            "x": -4.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-2-3",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 2,
+            "z": 3
+          },
+          "center_m": {
+            "x": -6.0,
+            "y": 0,
+            "z": 0.0
+          },
+          "distance_m": 5.66,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-3",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 3
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 0.0
+          },
+          "distance_m": 5.66,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": true,
+            "open": false
+          }
+        ],
+        "items": []
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 16,
+      "agent": {
+        "grid_position": {
+          "x": 4,
+          "z": 5
+        },
+        "pose": {
+          "position_m": {
+            "x": -2.0,
+            "y": 1.45,
+            "z": 4.0
+          },
+          "yaw_degrees": 90,
+          "facing": "east"
+        },
+        "facing": "east",
+        "inventory": [
+          "brass_key"
+        ]
+      },
+      "action": {
+        "type": "turn_right"
+      },
+      "thought": "positioning to operate the blue door",
+      "event": "Rotated right; camera yaw is now 90 degrees.",
+      "known_map": "######?????\n#...#...???\n#.#.#.##???\n#.#...#.???\n?.###.#.???\n?...>.D.???\n??######???",
+      "visible_entities": [
+        {
+          "id": "wall-4-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 4
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-4-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 4,
+            "z": 6
+          },
+          "center_m": {
+            "x": -2.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-5-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 5,
+            "z": 6
+          },
+          "center_m": {
+            "x": 0.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "door-6-5",
+          "label": "locked blue force door",
+          "kind": "door",
+          "grid_position": {
+            "x": 6,
+            "z": 5
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 4.0
+          },
+          "distance_m": 4.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": true,
+          "state": {
+            "locked": true,
+            "open": false
+          }
+        },
+        {
+          "id": "wall-6-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 4
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": -26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 6
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": 26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-3",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 3
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 0.0
+          },
+          "distance_m": 5.66,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "move_forward"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": true,
+            "open": false
+          }
+        ],
+        "items": []
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 17,
+      "agent": {
+        "grid_position": {
+          "x": 5,
+          "z": 5
+        },
+        "pose": {
+          "position_m": {
+            "x": 0.0,
+            "y": 1.45,
+            "z": 4.0
+          },
+          "yaw_degrees": 90,
+          "facing": "east"
+        },
+        "facing": "east",
+        "inventory": [
+          "brass_key"
+        ]
+      },
+      "action": {
+        "type": "move_forward"
+      },
+      "thought": "positioning to operate the blue door",
+      "event": "Moved to floor cell (5,5).",
+      "known_map": "######?????\n#...#...???\n#.#.#.##???\n#.#...#.???\n?.###.#.???\n?....>D.???\n??######???",
+      "visible_entities": [
+        {
+          "id": "door-6-5",
+          "label": "locked blue force door",
+          "kind": "door",
+          "grid_position": {
+            "x": 6,
+            "z": 5
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 4.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": true,
+          "state": {
+            "locked": true,
+            "open": false
+          }
+        },
+        {
+          "id": "wall-5-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 5,
+            "z": 6
+          },
+          "center_m": {
+            "x": 0.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 4
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 6
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-7-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 7,
+            "z": 6
+          },
+          "center_m": {
+            "x": 4.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": 26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "unlock"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": true,
+            "open": false
+          }
+        ],
+        "items": []
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 18,
+      "agent": {
+        "grid_position": {
+          "x": 5,
+          "z": 5
+        },
+        "pose": {
+          "position_m": {
+            "x": 0.0,
+            "y": 1.45,
+            "z": 4.0
+          },
+          "yaw_degrees": 90,
+          "facing": "east"
+        },
+        "facing": "east",
+        "inventory": [
+          "brass_key"
+        ]
+      },
+      "action": {
+        "type": "unlock"
+      },
+      "thought": "using the key on the locked door",
+      "event": "The brass key dissolved the blue force lock.",
+      "known_map": "######?????\n#...#...???\n#.#.#.##???\n#.#...#.???\n?.###.#.???\n?....>d.???\n??######???",
+      "visible_entities": [
+        {
+          "id": "door-6-5",
+          "label": "unlocked blue force door",
+          "kind": "door",
+          "grid_position": {
+            "x": 6,
+            "z": 5
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 4.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": true,
+          "state": {
+            "locked": false,
+            "open": false
+          }
+        },
+        {
+          "id": "wall-5-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 5,
+            "z": 6
+          },
+          "center_m": {
+            "x": 0.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 4
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 6
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-7-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 7,
+            "z": 6
+          },
+          "center_m": {
+            "x": 4.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": 26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "open"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": false,
+            "open": false
+          }
+        ],
+        "items": []
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 19,
+      "agent": {
+        "grid_position": {
+          "x": 5,
+          "z": 5
+        },
+        "pose": {
+          "position_m": {
+            "x": 0.0,
+            "y": 1.45,
+            "z": 4.0
+          },
+          "yaw_degrees": 90,
+          "facing": "east"
+        },
+        "facing": "east",
+        "inventory": [
+          "brass_key"
+        ]
+      },
+      "action": {
+        "type": "open"
+      },
+      "thought": "opening the unlocked door",
+      "event": "The blue force door opened into a light bridge.",
+      "known_map": "######?????\n#...#...???\n#.#.#.##???\n#.#...#.???\n?.###.#.???\n?....>/.???\n??######???",
+      "visible_entities": [
+        {
+          "id": "door-6-5",
+          "label": "open blue force doorway",
+          "kind": "door",
+          "grid_position": {
+            "x": 6,
+            "z": 5
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 4.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": false,
+          "state": {
+            "locked": false,
+            "open": true
+          }
+        },
+        {
+          "id": "wall-5-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 5,
+            "z": 6
+          },
+          "center_m": {
+            "x": 0.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 4
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 6
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-7-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 7,
+            "z": 6
+          },
+          "center_m": {
+            "x": 4.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": 26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "move_forward"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": false,
+            "open": true
+          }
+        ],
+        "items": []
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 20,
+      "agent": {
+        "grid_position": {
+          "x": 6,
+          "z": 5
+        },
+        "pose": {
+          "position_m": {
+            "x": 2.0,
+            "y": 1.45,
+            "z": 4.0
+          },
+          "yaw_degrees": 90,
+          "facing": "east"
+        },
+        "facing": "east",
+        "inventory": [
+          "brass_key"
+        ]
+      },
+      "action": {
+        "type": "move_forward"
+      },
+      "thought": "moving toward nearest useful frontier",
+      "event": "Moved to floor cell (6,5).",
+      "known_map": "######?????\n#...#...???\n#.#.#.##???\n#.#...#..??\n?.###.#.#??\n?.....>.#??\n??#######??",
+      "visible_entities": [
+        {
+          "id": "door-6-5",
+          "label": "open blue force doorway",
+          "kind": "door",
+          "grid_position": {
+            "x": 6,
+            "z": 5
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 4.0
+          },
+          "distance_m": 0.0,
+          "bearing_degrees": -90.0,
+          "blocks_movement": false,
+          "state": {
+            "locked": false,
+            "open": true
+          }
+        },
+        {
+          "id": "wall-6-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 4
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 6
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-7-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 7,
+            "z": 6
+          },
+          "center_m": {
+            "x": 4.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-8-5",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 8,
+            "z": 5
+          },
+          "center_m": {
+            "x": 6.0,
+            "y": 0,
+            "z": 4.0
+          },
+          "distance_m": 4.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-8-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 8,
+            "z": 4
+          },
+          "center_m": {
+            "x": 6.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": -26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-8-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 8,
+            "z": 6
+          },
+          "center_m": {
+            "x": 6.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": 26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "move_forward"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": false,
+            "open": true
+          }
+        ],
+        "items": []
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 21,
+      "agent": {
+        "grid_position": {
+          "x": 7,
+          "z": 5
+        },
+        "pose": {
+          "position_m": {
+            "x": 4.0,
+            "y": 1.45,
+            "z": 4.0
+          },
+          "yaw_degrees": 90,
+          "facing": "east"
+        },
+        "facing": "east",
+        "inventory": [
+          "brass_key"
+        ]
+      },
+      "action": {
+        "type": "move_forward"
+      },
+      "thought": "moving toward nearest useful frontier",
+      "event": "Moved to floor cell (7,5).",
+      "known_map": "######?????\n#...#...???\n#.#.#.##???\n#.#...#...?\n?.###.#.#.?\n?...../>#.?\n??########?",
+      "visible_entities": [
+        {
+          "id": "door-6-5",
+          "label": "open blue force doorway",
+          "kind": "door",
+          "grid_position": {
+            "x": 6,
+            "z": 5
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 4.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -180.0,
+          "blocks_movement": false,
+          "state": {
+            "locked": false,
+            "open": true
+          }
+        },
+        {
+          "id": "wall-7-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 7,
+            "z": 6
+          },
+          "center_m": {
+            "x": 4.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-8-5",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 8,
+            "z": 5
+          },
+          "center_m": {
+            "x": 6.0,
+            "y": 0,
+            "z": 4.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-8-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 8,
+            "z": 4
+          },
+          "center_m": {
+            "x": 6.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-8-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 8,
+            "z": 6
+          },
+          "center_m": {
+            "x": 6.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-9-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 9,
+            "z": 6
+          },
+          "center_m": {
+            "x": 8.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": 26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": false,
+            "open": true
+          }
+        ],
+        "items": []
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 22,
+      "agent": {
+        "grid_position": {
+          "x": 7,
+          "z": 5
+        },
+        "pose": {
+          "position_m": {
+            "x": 4.0,
+            "y": 1.45,
+            "z": 4.0
+          },
+          "yaw_degrees": 0,
+          "facing": "north"
+        },
+        "facing": "north",
+        "inventory": [
+          "brass_key"
+        ]
+      },
+      "action": {
+        "type": "turn_left"
+      },
+      "thought": "moving toward nearest useful frontier",
+      "event": "Rotated left; camera yaw is now 0 degrees.",
+      "known_map": "######?????\n#...#...???\n#.#.#.##???\n#.#...#...?\n?.###.#.#.?\n?...../^#.?\n??########?",
+      "visible_entities": [
+        {
+          "id": "door-6-5",
+          "label": "open blue force doorway",
+          "kind": "door",
+          "grid_position": {
+            "x": 6,
+            "z": 5
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 4.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -90.0,
+          "blocks_movement": false,
+          "state": {
+            "locked": false,
+            "open": true
+          }
+        },
+        {
+          "id": "wall-7-6",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 7,
+            "z": 6
+          },
+          "center_m": {
+            "x": 4.0,
+            "y": 0,
+            "z": 6.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -180.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-8-5",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 8,
+            "z": 5
+          },
+          "center_m": {
+            "x": 6.0,
+            "y": 0,
+            "z": 4.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 4
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-8-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 8,
+            "z": 4
+          },
+          "center_m": {
+            "x": 6.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-3",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 3
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 0.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": -26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "move_forward"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": false,
+            "open": true
+          }
+        ],
+        "items": []
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 23,
+      "agent": {
+        "grid_position": {
+          "x": 7,
+          "z": 4
+        },
+        "pose": {
+          "position_m": {
+            "x": 4.0,
+            "y": 1.45,
+            "z": 2.0
+          },
+          "yaw_degrees": 0,
+          "facing": "north"
+        },
+        "facing": "north",
+        "inventory": [
+          "brass_key"
+        ]
+      },
+      "action": {
+        "type": "move_forward"
+      },
+      "thought": "moving toward nearest useful frontier",
+      "event": "Moved to floor cell (7,4).",
+      "known_map": "######?????\n#...#...???\n#.#.#.###.?\n#.#...#...?\n?.###.#^#.?\n?...../.#.?\n??########?",
+      "visible_entities": [
+        {
+          "id": "wall-6-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 4
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-8-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 8,
+            "z": 4
+          },
+          "center_m": {
+            "x": 6.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-3",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 3
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 0.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-7-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 7,
+            "z": 2
+          },
+          "center_m": {
+            "x": 4.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 4.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 2
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": -26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-8-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 8,
+            "z": 2
+          },
+          "center_m": {
+            "x": 6.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": 26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "move_forward"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": false,
+            "open": true
+          }
+        ],
+        "items": []
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 24,
+      "agent": {
+        "grid_position": {
+          "x": 7,
+          "z": 3
+        },
+        "pose": {
+          "position_m": {
+            "x": 4.0,
+            "y": 1.45,
+            "z": 0.0
+          },
+          "yaw_degrees": 0,
+          "facing": "north"
+        },
+        "facing": "north",
+        "inventory": [
+          "brass_key"
+        ]
+      },
+      "action": {
+        "type": "move_forward"
+      },
+      "thought": "moving toward nearest useful frontier",
+      "event": "Moved to floor cell (7,3).",
+      "known_map": "######?????\n#...#....G?\n#.#.#.###.?\n#.#...#^..?\n?.###.#.#.?\n?...../.#.?\n??########?",
+      "visible_entities": [
+        {
+          "id": "wall-6-3",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 3
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 0.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-7-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 7,
+            "z": 2
+          },
+          "center_m": {
+            "x": 4.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-6-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 2
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-8-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 8,
+            "z": 2
+          },
+          "center_m": {
+            "x": 6.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "goal-9-1",
+          "label": "emerald beacon goal volume",
+          "kind": "artifact",
+          "grid_position": {
+            "x": 9,
+            "z": 1
+          },
+          "center_m": {
+            "x": 8.0,
+            "y": 0,
+            "z": -4.0
+          },
+          "distance_m": 5.66,
+          "bearing_degrees": 45.0,
+          "blocks_movement": false,
+          "state": {
+            "terrain": "emerald_beacon",
+            "objects": [
+              "emerald_beacon"
+            ]
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": false,
+            "open": true
+          }
+        ],
+        "items": []
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 25,
+      "agent": {
+        "grid_position": {
+          "x": 7,
+          "z": 3
+        },
+        "pose": {
+          "position_m": {
+            "x": 4.0,
+            "y": 1.45,
+            "z": 0.0
+          },
+          "yaw_degrees": 90,
+          "facing": "east"
+        },
+        "facing": "east",
+        "inventory": [
+          "brass_key"
+        ]
+      },
+      "action": {
+        "type": "turn_right"
+      },
+      "thought": "moving toward the known emerald beacon",
+      "event": "Rotated right; camera yaw is now 90 degrees.",
+      "known_map": "######?????\n#...#....G?\n#.#.#.###.?\n#.#...#>..?\n?.###.#.#.?\n?...../.#.?\n??########?",
+      "visible_entities": [
+        {
+          "id": "wall-6-3",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 6,
+            "z": 3
+          },
+          "center_m": {
+            "x": 2.0,
+            "y": 0,
+            "z": 0.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -180.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-7-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 7,
+            "z": 2
+          },
+          "center_m": {
+            "x": 4.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-8-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 8,
+            "z": 2
+          },
+          "center_m": {
+            "x": 6.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-8-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 8,
+            "z": 4
+          },
+          "center_m": {
+            "x": 6.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "goal-9-1",
+          "label": "emerald beacon goal volume",
+          "kind": "artifact",
+          "grid_position": {
+            "x": 9,
+            "z": 1
+          },
+          "center_m": {
+            "x": 8.0,
+            "y": 0,
+            "z": -4.0
+          },
+          "distance_m": 5.66,
+          "bearing_degrees": -45.0,
+          "blocks_movement": false,
+          "state": {
+            "terrain": "emerald_beacon",
+            "objects": [
+              "emerald_beacon"
+            ]
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "move_forward"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": false,
+            "open": true
+          }
+        ],
+        "items": []
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 26,
+      "agent": {
+        "grid_position": {
+          "x": 8,
+          "z": 3
+        },
+        "pose": {
+          "position_m": {
+            "x": 6.0,
+            "y": 1.45,
+            "z": 0.0
+          },
+          "yaw_degrees": 90,
+          "facing": "east"
+        },
+        "facing": "east",
+        "inventory": [
+          "brass_key"
+        ]
+      },
+      "action": {
+        "type": "move_forward"
+      },
+      "thought": "moving toward the known emerald beacon",
+      "event": "Moved to floor cell (8,3).",
+      "known_map": "######?????\n#...#....G#\n#.#.#.###.#\n#.#...#.>.#\n?.###.#.#.#\n?...../.#.#\n??########?",
+      "visible_entities": [
+        {
+          "id": "wall-8-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 8,
+            "z": 2
+          },
+          "center_m": {
+            "x": 6.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-8-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 8,
+            "z": 4
+          },
+          "center_m": {
+            "x": 6.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-10-3",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 10,
+            "z": 3
+          },
+          "center_m": {
+            "x": 10.0,
+            "y": 0,
+            "z": 0.0
+          },
+          "distance_m": 4.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-10-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 10,
+            "z": 2
+          },
+          "center_m": {
+            "x": 10.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": -26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-10-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 10,
+            "z": 4
+          },
+          "center_m": {
+            "x": 10.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": 26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-10-1",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 10,
+            "z": 1
+          },
+          "center_m": {
+            "x": 10.0,
+            "y": 0,
+            "z": -4.0
+          },
+          "distance_m": 5.66,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-10-5",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 10,
+            "z": 5
+          },
+          "center_m": {
+            "x": 10.0,
+            "y": 0,
+            "z": 4.0
+          },
+          "distance_m": 5.66,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "move_forward"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": false,
+            "open": true
+          }
+        ],
+        "items": []
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 27,
+      "agent": {
+        "grid_position": {
+          "x": 9,
+          "z": 3
+        },
+        "pose": {
+          "position_m": {
+            "x": 8.0,
+            "y": 1.45,
+            "z": 0.0
+          },
+          "yaw_degrees": 90,
+          "facing": "east"
+        },
+        "facing": "east",
+        "inventory": [
+          "brass_key"
+        ]
+      },
+      "action": {
+        "type": "move_forward"
+      },
+      "thought": "moving toward the known emerald beacon",
+      "event": "Moved to floor cell (9,3).",
+      "known_map": "######?????\n#...#....G#\n#.#.#.###.#\n#.#...#..>#\n?.###.#.#.#\n?...../.#.#\n??########?",
+      "visible_entities": [
+        {
+          "id": "wall-10-3",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 10,
+            "z": 3
+          },
+          "center_m": {
+            "x": 10.0,
+            "y": 0,
+            "z": 0.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-10-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 10,
+            "z": 2
+          },
+          "center_m": {
+            "x": 10.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-10-4",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 10,
+            "z": 4
+          },
+          "center_m": {
+            "x": 10.0,
+            "y": 0,
+            "z": 2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": false,
+            "open": true
+          }
+        ],
+        "items": []
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 28,
+      "agent": {
+        "grid_position": {
+          "x": 9,
+          "z": 3
+        },
+        "pose": {
+          "position_m": {
+            "x": 8.0,
+            "y": 1.45,
+            "z": 0.0
+          },
+          "yaw_degrees": 0,
+          "facing": "north"
+        },
+        "facing": "north",
+        "inventory": [
+          "brass_key"
+        ]
+      },
+      "action": {
+        "type": "turn_left"
+      },
+      "thought": "moving toward the known emerald beacon",
+      "event": "Rotated left; camera yaw is now 0 degrees.",
+      "known_map": "######?????\n#...#....G#\n#.#.#.###.#\n#.#...#..^#\n?.###.#.#.#\n?...../.#.#\n??########?",
+      "visible_entities": [
+        {
+          "id": "wall-10-3",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 10,
+            "z": 3
+          },
+          "center_m": {
+            "x": 10.0,
+            "y": 0,
+            "z": 0.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-10-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 10,
+            "z": 2
+          },
+          "center_m": {
+            "x": 10.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-8-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 8,
+            "z": 2
+          },
+          "center_m": {
+            "x": 6.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "goal-9-1",
+          "label": "emerald beacon goal volume",
+          "kind": "artifact",
+          "grid_position": {
+            "x": 9,
+            "z": 1
+          },
+          "center_m": {
+            "x": 8.0,
+            "y": 0,
+            "z": -4.0
+          },
+          "distance_m": 4.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": false,
+          "state": {
+            "terrain": "emerald_beacon",
+            "objects": [
+              "emerald_beacon"
+            ]
+          }
+        },
+        {
+          "id": "wall-10-1",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 10,
+            "z": 1
+          },
+          "center_m": {
+            "x": 10.0,
+            "y": 0,
+            "z": -4.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": 26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "move_forward"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": false,
+            "open": true
+          }
+        ],
+        "items": []
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 29,
+      "agent": {
+        "grid_position": {
+          "x": 9,
+          "z": 2
+        },
+        "pose": {
+          "position_m": {
+            "x": 8.0,
+            "y": 1.45,
+            "z": -2.0
+          },
+          "yaw_degrees": 0,
+          "facing": "north"
+        },
+        "facing": "north",
+        "inventory": [
+          "brass_key"
+        ]
+      },
+      "action": {
+        "type": "move_forward"
+      },
+      "thought": "moving toward the known emerald beacon",
+      "event": "Moved to floor cell (9,2).",
+      "known_map": "######?####\n#...#....G#\n#.#.#.###^#\n#.#...#...#\n?.###.#.#.#\n?...../.#.#\n??########?",
+      "visible_entities": [
+        {
+          "id": "goal-9-1",
+          "label": "emerald beacon goal volume",
+          "kind": "artifact",
+          "grid_position": {
+            "x": 9,
+            "z": 1
+          },
+          "center_m": {
+            "x": 8.0,
+            "y": 0,
+            "z": -4.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": false,
+          "state": {
+            "terrain": "emerald_beacon",
+            "objects": [
+              "emerald_beacon"
+            ]
+          }
+        },
+        {
+          "id": "wall-10-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 10,
+            "z": 2
+          },
+          "center_m": {
+            "x": 10.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-8-2",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 8,
+            "z": 2
+          },
+          "center_m": {
+            "x": 6.0,
+            "y": 0,
+            "z": -2.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": -90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-10-1",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 10,
+            "z": 1
+          },
+          "center_m": {
+            "x": 10.0,
+            "y": 0,
+            "z": -4.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-9-0",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 9,
+            "z": 0
+          },
+          "center_m": {
+            "x": 8.0,
+            "y": 0,
+            "z": -6.0
+          },
+          "distance_m": 4.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-10-0",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 10,
+            "z": 0
+          },
+          "center_m": {
+            "x": 10.0,
+            "y": 0,
+            "z": -6.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": 26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-8-0",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 8,
+            "z": 0
+          },
+          "center_m": {
+            "x": 6.0,
+            "y": 0,
+            "z": -6.0
+          },
+          "distance_m": 4.47,
+          "bearing_degrees": -26.6,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-7-0",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 7,
+            "z": 0
+          },
+          "center_m": {
+            "x": 4.0,
+            "y": 0,
+            "z": -6.0
+          },
+          "distance_m": 5.66,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "move_forward"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": false,
+            "open": true
+          }
+        ],
+        "items": []
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 30,
+      "agent": {
+        "grid_position": {
+          "x": 9,
+          "z": 1
+        },
+        "pose": {
+          "position_m": {
+            "x": 8.0,
+            "y": 1.45,
+            "z": -4.0
+          },
+          "yaw_degrees": 0,
+          "facing": "north"
+        },
+        "facing": "north",
+        "inventory": [
+          "brass_key"
+        ]
+      },
+      "action": {
+        "type": "move_forward"
+      },
+      "thought": "moving toward the known emerald beacon",
+      "event": "Moved to floor cell (9,1).",
+      "known_map": "######?####\n#...#....^#\n#.#.#.###.#\n#.#...#...#\n?.###.#.#.#\n?...../.#.#\n??########?",
+      "visible_entities": [
+        {
+          "id": "goal-9-1",
+          "label": "emerald beacon goal volume",
+          "kind": "artifact",
+          "grid_position": {
+            "x": 9,
+            "z": 1
+          },
+          "center_m": {
+            "x": 8.0,
+            "y": 0,
+            "z": -4.0
+          },
+          "distance_m": 0.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": false,
+          "state": {
+            "terrain": "emerald_beacon",
+            "objects": [
+              "emerald_beacon"
+            ]
+          }
+        },
+        {
+          "id": "wall-10-1",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 10,
+            "z": 1
+          },
+          "center_m": {
+            "x": 10.0,
+            "y": 0,
+            "z": -4.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-9-0",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 9,
+            "z": 0
+          },
+          "center_m": {
+            "x": 8.0,
+            "y": 0,
+            "z": -6.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-10-0",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 10,
+            "z": 0
+          },
+          "center_m": {
+            "x": 10.0,
+            "y": 0,
+            "z": -6.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-8-0",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 8,
+            "z": 0
+          },
+          "center_m": {
+            "x": 6.0,
+            "y": 0,
+            "z": -6.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "finish"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": false,
+            "open": true
+          }
+        ],
+        "items": []
+      },
+      "status": {
+        "done": false,
+        "success": false
+      }
+    },
+    {
+      "step": 31,
+      "agent": {
+        "grid_position": {
+          "x": 9,
+          "z": 1
+        },
+        "pose": {
+          "position_m": {
+            "x": 8.0,
+            "y": 1.45,
+            "z": -4.0
+          },
+          "yaw_degrees": 0,
+          "facing": "north"
+        },
+        "facing": "north",
+        "inventory": [
+          "brass_key"
+        ]
+      },
+      "action": {
+        "type": "finish"
+      },
+      "thought": "standing on the goal tile",
+      "event": "Mission complete: the agent entered the emerald beacon.",
+      "known_map": "######?####\n#...#....^#\n#.#.#.###.#\n#.#...#...#\n?.###.#.#.#\n?...../.#.#\n??########?",
+      "visible_entities": [
+        {
+          "id": "goal-9-1",
+          "label": "emerald beacon goal volume",
+          "kind": "artifact",
+          "grid_position": {
+            "x": 9,
+            "z": 1
+          },
+          "center_m": {
+            "x": 8.0,
+            "y": 0,
+            "z": -4.0
+          },
+          "distance_m": 0.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": false,
+          "state": {
+            "terrain": "emerald_beacon",
+            "objects": [
+              "emerald_beacon"
+            ]
+          }
+        },
+        {
+          "id": "wall-10-1",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 10,
+            "z": 1
+          },
+          "center_m": {
+            "x": 10.0,
+            "y": 0,
+            "z": -4.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 90.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-9-0",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 9,
+            "z": 0
+          },
+          "center_m": {
+            "x": 8.0,
+            "y": 0,
+            "z": -6.0
+          },
+          "distance_m": 2.0,
+          "bearing_degrees": 0.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-10-0",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 10,
+            "z": 0
+          },
+          "center_m": {
+            "x": 10.0,
+            "y": 0,
+            "z": -6.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": 45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        },
+        {
+          "id": "wall-8-0",
+          "label": "obsidian wall volume",
+          "kind": "architecture",
+          "grid_position": {
+            "x": 8,
+            "z": 0
+          },
+          "center_m": {
+            "x": 6.0,
+            "y": 0,
+            "z": -6.0
+          },
+          "distance_m": 2.83,
+          "bearing_degrees": -45.0,
+          "blocks_movement": true,
+          "state": {
+            "terrain": "wall_volume",
+            "objects": []
+          }
+        }
+      ],
+      "available_actions": [
+        "turn_left",
+        "turn_right",
+        "look",
+        "finish"
+      ],
+      "scene_state": {
+        "doors": [
+          {
+            "id": "door-6-5",
+            "grid_position": {
+              "x": 6,
+              "z": 5
+            },
+            "center_m": {
+              "x": 2.0,
+              "y": 1.5,
+              "z": 4.0
+            },
+            "locked": false,
+            "open": true
+          }
+        ],
+        "items": []
+      },
+      "status": {
+        "done": true,
+        "success": true
+      }
+    }
+  ],
+  "result": {
+    "success": true,
+    "steps": 31
+  }
+}

@@ -1,4 +1,5 @@
-Mission: Find the brass key, unlock and open the blue door, reach the emerald goal tile, then finish.
+Mission: Explore the Aether Vault, recover the brass key from its pedestal, unlock and open the blue force door, enter the emerald beacon, then finish.
+Scene: Aether Vault (3d_scene)
 Initial known map:
 ####???????
 #>..???????
@@ -8,407 +9,159 @@ Initial known map:
 ???????????
 ???????????
 
-Step 01 | pos=(2,1) facing=east inventory=[]
+Step 01 | cell=(2,1) pose=(-6.0,1.45,-4.0)m yaw=90 inventory=[]
 thought: moving toward nearest useful frontier
 action: move_forward
-event: Moved to (2,1).
-known map:
-#####??????
-#.>.#??????
-#.#.#??????
-#.#..??????
-???????????
-???????????
-???????????
+event: Moved to floor cell (2,1).
 
-Step 02 | pos=(3,1) facing=east inventory=[]
+Step 02 | cell=(3,1) pose=(-4.0,1.45,-4.0)m yaw=90 inventory=[]
 thought: moving toward nearest useful frontier
 action: move_forward
-event: Moved to (3,1).
-known map:
-######?????
-#..>#.?????
-#.#.#.?????
-#.#...?????
-???????????
-???????????
-???????????
+event: Moved to floor cell (3,1).
 
-Step 03 | pos=(3,1) facing=south inventory=[]
+Step 03 | cell=(3,1) pose=(-4.0,1.45,-4.0)m yaw=180 inventory=[]
 thought: moving toward nearest useful frontier
 action: turn_right
-event: Turned right; now facing south.
-known map:
-######?????
-#..v#.?????
-#.#.#.?????
-#.#...?????
-???????????
-???????????
-???????????
+event: Rotated right; camera yaw is now 180 degrees.
 
-Step 04 | pos=(3,2) facing=south inventory=[]
+Step 04 | cell=(3,2) pose=(-4.0,1.45,-2.0)m yaw=180 inventory=[]
 thought: moving toward nearest useful frontier
 action: move_forward
-event: Moved to (3,2).
-known map:
-######?????
-#...#.?????
-#.#v#.?????
-#.#...?????
-?.###.?????
-???????????
-???????????
+event: Moved to floor cell (3,2).
 
-Step 05 | pos=(3,3) facing=south inventory=[]
+Step 05 | cell=(3,3) pose=(-4.0,1.45,0.0)m yaw=180 inventory=[]
 thought: moving toward nearest useful frontier
 action: move_forward
-event: Moved to (3,3).
-known map:
-######?????
-#...#.?????
-#.#.#.?????
-#.#v..?????
-?.###.?????
-?...K.?????
-???????????
+event: Moved to floor cell (3,3).
 
-Step 06 | pos=(3,3) facing=east inventory=[]
+Step 06 | cell=(3,3) pose=(-4.0,1.45,0.0)m yaw=90 inventory=[]
 thought: moving toward the known brass key
 action: turn_left
-event: Turned left; now facing east.
-known map:
-######?????
-#...#.?????
-#.#.#.?????
-#.#>..?????
-?.###.?????
-?...K.?????
-???????????
+event: Rotated left; camera yaw is now 90 degrees.
 
-Step 07 | pos=(4,3) facing=east inventory=[]
+Step 07 | cell=(4,3) pose=(-2.0,1.45,0.0)m yaw=90 inventory=[]
 thought: moving toward the known brass key
 action: move_forward
-event: Moved to (4,3).
-known map:
-######?????
-#...#..????
-#.#.#.#????
-#.#.>.#????
-?.###.#????
-?...K.D????
-???????????
+event: Moved to floor cell (4,3).
 
-Step 08 | pos=(5,3) facing=east inventory=[]
+Step 08 | cell=(5,3) pose=(0.0,1.45,0.0)m yaw=90 inventory=[]
 thought: moving toward the known brass key
 action: move_forward
-event: Moved to (5,3).
-known map:
-######?????
-#...#...???
-#.#.#.##???
-#.#..>#.???
-?.###.#.???
-?...K.D.???
-???????????
+event: Moved to floor cell (5,3).
 
-Step 09 | pos=(5,3) facing=south inventory=[]
+Step 09 | cell=(5,3) pose=(0.0,1.45,0.0)m yaw=180 inventory=[]
 thought: moving toward the known brass key
 action: turn_right
-event: Turned right; now facing south.
-known map:
-######?????
-#...#...???
-#.#.#.##???
-#.#..v#.???
-?.###.#.???
-?...K.D.???
-???????????
+event: Rotated right; camera yaw is now 180 degrees.
 
-Step 10 | pos=(5,4) facing=south inventory=[]
+Step 10 | cell=(5,4) pose=(0.0,1.45,2.0)m yaw=180 inventory=[]
 thought: moving toward the known brass key
 action: move_forward
-event: Moved to (5,4).
-known map:
-######?????
-#...#...???
-#.#.#.##???
-#.#...#.???
-?.###v#.???
-?...K.D.???
-???#####???
+event: Moved to floor cell (5,4).
 
-Step 11 | pos=(5,5) facing=south inventory=[]
+Step 11 | cell=(5,5) pose=(0.0,1.45,4.0)m yaw=180 inventory=[]
 thought: moving toward the known brass key
 action: move_forward
-event: Moved to (5,5).
-known map:
-######?????
-#...#...???
-#.#.#.##???
-#.#...#.???
-?.###.#.???
-?...KvD.???
-???#####???
+event: Moved to floor cell (5,5).
 
-Step 12 | pos=(5,5) facing=west inventory=[]
+Step 12 | cell=(5,5) pose=(0.0,1.45,4.0)m yaw=270 inventory=[]
 thought: moving toward the known brass key
 action: turn_right
-event: Turned right; now facing west.
-known map:
-######?????
-#...#...???
-#.#.#.##???
-#.#...#.???
-?.###.#.???
-?...K<D.???
-???#####???
+event: Rotated right; camera yaw is now 270 degrees.
 
-Step 13 | pos=(4,5) facing=west inventory=[]
+Step 13 | cell=(4,5) pose=(-2.0,1.45,4.0)m yaw=270 inventory=[]
 thought: moving toward the known brass key
 action: move_forward
-event: Moved to (4,5).
-known map:
-######?????
-#...#...???
-#.#.#.##???
-#.#...#.???
-?.###.#.???
-?...<.D.???
-??######???
+event: Moved to floor cell (4,5).
 
-Step 14 | pos=(4,5) facing=west inventory=brass_key
+Step 14 | cell=(4,5) pose=(-2.0,1.45,4.0)m yaw=270 inventory=brass_key
 thought: collecting the key before approaching the door
 action: pick_up
-event: Picked up brass_key.
-known map:
-######?????
-#...#...???
-#.#.#.##???
-#.#...#.???
-?.###.#.???
-?...<.D.???
-??######???
+event: Lifted brass_key from the brass pedestal.
 
-Step 15 | pos=(4,5) facing=north inventory=brass_key
+Step 15 | cell=(4,5) pose=(-2.0,1.45,4.0)m yaw=0 inventory=brass_key
 thought: positioning to operate the blue door
 action: turn_right
-event: Turned right; now facing north.
-known map:
-######?????
-#...#...???
-#.#.#.##???
-#.#...#.???
-?.###.#.???
-?...^.D.???
-??######???
+event: Rotated right; camera yaw is now 0 degrees.
 
-Step 16 | pos=(4,5) facing=east inventory=brass_key
+Step 16 | cell=(4,5) pose=(-2.0,1.45,4.0)m yaw=90 inventory=brass_key
 thought: positioning to operate the blue door
 action: turn_right
-event: Turned right; now facing east.
-known map:
-######?????
-#...#...???
-#.#.#.##???
-#.#...#.???
-?.###.#.???
-?...>.D.???
-??######???
+event: Rotated right; camera yaw is now 90 degrees.
 
-Step 17 | pos=(5,5) facing=east inventory=brass_key
+Step 17 | cell=(5,5) pose=(0.0,1.45,4.0)m yaw=90 inventory=brass_key
 thought: positioning to operate the blue door
 action: move_forward
-event: Moved to (5,5).
-known map:
-######?????
-#...#...???
-#.#.#.##???
-#.#...#.???
-?.###.#.???
-?....>D.???
-??######???
+event: Moved to floor cell (5,5).
 
-Step 18 | pos=(5,5) facing=east inventory=brass_key
+Step 18 | cell=(5,5) pose=(0.0,1.45,4.0)m yaw=90 inventory=brass_key
 thought: using the key on the locked door
 action: unlock
-event: Unlocked the blue door with the brass key.
-known map:
-######?????
-#...#...???
-#.#.#.##???
-#.#...#.???
-?.###.#.???
-?....>d.???
-??######???
+event: The brass key dissolved the blue force lock.
 
-Step 19 | pos=(5,5) facing=east inventory=brass_key
+Step 19 | cell=(5,5) pose=(0.0,1.45,4.0)m yaw=90 inventory=brass_key
 thought: opening the unlocked door
 action: open
-event: Opened the blue door.
-known map:
-######?????
-#...#...???
-#.#.#.##???
-#.#...#.???
-?.###.#.???
-?....>/.???
-??######???
+event: The blue force door opened into a light bridge.
 
-Step 20 | pos=(6,5) facing=east inventory=brass_key
+Step 20 | cell=(6,5) pose=(2.0,1.45,4.0)m yaw=90 inventory=brass_key
 thought: moving toward nearest useful frontier
 action: move_forward
-event: Moved to (6,5).
-known map:
-######?????
-#...#...???
-#.#.#.##???
-#.#...#..??
-?.###.#.#??
-?.....>.#??
-??#######??
+event: Moved to floor cell (6,5).
 
-Step 21 | pos=(7,5) facing=east inventory=brass_key
+Step 21 | cell=(7,5) pose=(4.0,1.45,4.0)m yaw=90 inventory=brass_key
 thought: moving toward nearest useful frontier
 action: move_forward
-event: Moved to (7,5).
-known map:
-######?????
-#...#...???
-#.#.#.##???
-#.#...#...?
-?.###.#.#.?
-?...../>#.?
-??########?
+event: Moved to floor cell (7,5).
 
-Step 22 | pos=(7,5) facing=north inventory=brass_key
+Step 22 | cell=(7,5) pose=(4.0,1.45,4.0)m yaw=0 inventory=brass_key
 thought: moving toward nearest useful frontier
 action: turn_left
-event: Turned left; now facing north.
-known map:
-######?????
-#...#...???
-#.#.#.##???
-#.#...#...?
-?.###.#.#.?
-?...../^#.?
-??########?
+event: Rotated left; camera yaw is now 0 degrees.
 
-Step 23 | pos=(7,4) facing=north inventory=brass_key
+Step 23 | cell=(7,4) pose=(4.0,1.45,2.0)m yaw=0 inventory=brass_key
 thought: moving toward nearest useful frontier
 action: move_forward
-event: Moved to (7,4).
-known map:
-######?????
-#...#...???
-#.#.#.###.?
-#.#...#...?
-?.###.#^#.?
-?...../.#.?
-??########?
+event: Moved to floor cell (7,4).
 
-Step 24 | pos=(7,3) facing=north inventory=brass_key
+Step 24 | cell=(7,3) pose=(4.0,1.45,0.0)m yaw=0 inventory=brass_key
 thought: moving toward nearest useful frontier
 action: move_forward
-event: Moved to (7,3).
-known map:
-######?????
-#...#....G?
-#.#.#.###.?
-#.#...#^..?
-?.###.#.#.?
-?...../.#.?
-??########?
+event: Moved to floor cell (7,3).
 
-Step 25 | pos=(7,3) facing=east inventory=brass_key
-thought: moving toward the known emerald goal
+Step 25 | cell=(7,3) pose=(4.0,1.45,0.0)m yaw=90 inventory=brass_key
+thought: moving toward the known emerald beacon
 action: turn_right
-event: Turned right; now facing east.
-known map:
-######?????
-#...#....G?
-#.#.#.###.?
-#.#...#>..?
-?.###.#.#.?
-?...../.#.?
-??########?
+event: Rotated right; camera yaw is now 90 degrees.
 
-Step 26 | pos=(8,3) facing=east inventory=brass_key
-thought: moving toward the known emerald goal
+Step 26 | cell=(8,3) pose=(6.0,1.45,0.0)m yaw=90 inventory=brass_key
+thought: moving toward the known emerald beacon
 action: move_forward
-event: Moved to (8,3).
-known map:
-######?????
-#...#....G#
-#.#.#.###.#
-#.#...#.>.#
-?.###.#.#.#
-?...../.#.#
-??########?
+event: Moved to floor cell (8,3).
 
-Step 27 | pos=(9,3) facing=east inventory=brass_key
-thought: moving toward the known emerald goal
+Step 27 | cell=(9,3) pose=(8.0,1.45,0.0)m yaw=90 inventory=brass_key
+thought: moving toward the known emerald beacon
 action: move_forward
-event: Moved to (9,3).
-known map:
-######?????
-#...#....G#
-#.#.#.###.#
-#.#...#..>#
-?.###.#.#.#
-?...../.#.#
-??########?
+event: Moved to floor cell (9,3).
 
-Step 28 | pos=(9,3) facing=north inventory=brass_key
-thought: moving toward the known emerald goal
+Step 28 | cell=(9,3) pose=(8.0,1.45,0.0)m yaw=0 inventory=brass_key
+thought: moving toward the known emerald beacon
 action: turn_left
-event: Turned left; now facing north.
-known map:
-######?????
-#...#....G#
-#.#.#.###.#
-#.#...#..^#
-?.###.#.#.#
-?...../.#.#
-??########?
+event: Rotated left; camera yaw is now 0 degrees.
 
-Step 29 | pos=(9,2) facing=north inventory=brass_key
-thought: moving toward the known emerald goal
+Step 29 | cell=(9,2) pose=(8.0,1.45,-2.0)m yaw=0 inventory=brass_key
+thought: moving toward the known emerald beacon
 action: move_forward
-event: Moved to (9,2).
-known map:
-######?####
-#...#....G#
-#.#.#.###^#
-#.#...#...#
-?.###.#.#.#
-?...../.#.#
-??########?
+event: Moved to floor cell (9,2).
 
-Step 30 | pos=(9,1) facing=north inventory=brass_key
-thought: moving toward the known emerald goal
+Step 30 | cell=(9,1) pose=(8.0,1.45,-4.0)m yaw=0 inventory=brass_key
+thought: moving toward the known emerald beacon
 action: move_forward
-event: Moved to (9,1).
-known map:
-######?####
-#...#....^#
-#.#.#.###.#
-#.#...#...#
-?.###.#.#.#
-?...../.#.#
-??########?
+event: Moved to floor cell (9,1).
 
-Step 31 | pos=(9,1) facing=north inventory=brass_key
+Step 31 | cell=(9,1) pose=(8.0,1.45,-4.0)m yaw=0 inventory=brass_key
 thought: standing on the goal tile
 action: finish
-event: Goal completed: key used, door passed, goal reached.
-known map:
-######?####
-#...#....^#
-#.#.#.###.#
-#.#...#...#
-?.###.#.#.#
-?...../.#.#
-??########?
+event: Mission complete: the agent entered the emerald beacon.
 
 RESULT: success in 31 steps

@@ -1,12 +1,13 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 from pathlib import Path
 
 from .agents import HeuristicPolicy, LLMPolicy, OpenAICompatibleChatClient
 from .runner import run_episode
-from .world import GridWorld
+from .world import AetherVaultWorld
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -14,6 +15,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--agent", choices=("heuristic", "llm"), default="heuristic")
     parser.add_argument("--max-steps", type=int, default=80)
     parser.add_argument("--log-file", type=Path)
+    parser.add_argument("--replay-file", type=Path)
     parser.add_argument("--map-mode", choices=("known", "full", "none"), default="known")
     parser.add_argument("--show-observation", action="store_true")
     parser.add_argument(
@@ -34,7 +36,7 @@ def main(argv: list[str] | None = None) -> int:
     )
     args = parser.parse_args(argv)
 
-    world = GridWorld()
+    world = AetherVaultWorld()
     if args.agent == "heuristic":
         policy = HeuristicPolicy()
     else:
@@ -57,5 +59,8 @@ def main(argv: list[str] | None = None) -> int:
     if args.log_file:
         args.log_file.parent.mkdir(parents=True, exist_ok=True)
         args.log_file.write_text(result.transcript, encoding="utf-8")
+    if args.replay_file:
+        args.replay_file.parent.mkdir(parents=True, exist_ok=True)
+        args.replay_file.write_text(json.dumps(result.replay, indent=2), encoding="utf-8")
 
     return 0 if result.success else 1
